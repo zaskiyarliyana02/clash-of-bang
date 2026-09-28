@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clash of BaNG - Dark Fantasy Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo" onclick="switchPage('home')">
+            <div class="logo-icon">⚔️</div>
+            <div class="logo-text">CLASH<br><span>OF BANG</span></div>
+        </div>
+        <nav>
+            <a href="#" class="nav-link active" onclick="switchPage('home')">HOME</a>
+            <a href="#" class="nav-link" onclick="switchPage('gallery')">GALLERY</a>
+            <a href="#" class="nav-link" onclick="switchPage('troops')">TROOPS</a>
+            <a href="#" class="nav-link" onclick="switchPage('about')">ABOUT</a>
+            <a href="#" class="nav-link" onclick="switchPage('register')">REGISTER</a>
+        </nav>
+        <button id="nav-join-btn" class="btn-join" onclick="switchPage('register')">JOIN COMMUNITY</button>
+    </header>
+
+    <main id="page-home" class="page active">
+        <section class="hero">
+            <div class="hero-content">
+                <h5>WELCOME TO</h5>
+                <h1>CLASH <br><span class="purple-text">OF BANG</span></h1>
+                <p>Welcome to Clash of BaNG. Explore a complete hub of troop guides, battle strategies, and community-driven content. Learn how to master every unit, improve your gameplay, and connect with other players in one place.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="switchPage('troops')">EXPLORE TROOPS</button>
+                   <button id="hero-join-btn" class="btn-secondary" onclick="switchPage('register')">JOIN NOW</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="character-overlay"></div>
+            </div>
+        </section>
+
+        <section class="updates-section">
+            <div class="section-header">
+                <h2>LATEST UPDATES</h2>
+                <a href="#" class="nav-link" onclick="switchPage('readMore')">View All Updates <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="updates-grid">
+                <div class="update-card1">
+                    <span class="badge">NEW SEASON</span>
+                    <h3>SEASON 12: SHADOW RISING</h3>
+                    <p>New challenges, new rewards, and dark forces awaken!</p>
+                    <button class="btn-readmore" onclick="switchPage('readMore')">READ MORE</button>
+                </div>
+                <div class="update-card2">
+                    <span class="badge">EVENT</span>
+                    <h3>DARK CLAN GAMES</h3>
+                    <p>Team up with your clan and win exclusive prizes!</p>
+                    <button class="btn-readmore" onclick="switchPage('readMore')">READ MORE</button>
+                </div>
+                <div class="update-card3">
+                    <span class="badge">NEW TROOP</span>
+                    <h3>NECRO WARDEN IS HERE!</h3>
+                    <p>Summon the dead and lead your army to victory!</p>
+                    <button class="btn-readmore" onclick="switchPage('readMore')">READ MORE</button>
+                </div>
+            </div>
+        </section>
+
+            
+
+        <section class="popular-troops">
+            <div class="section-header">
+                <h2>MOST POPULAR TROOPS</h2>
+                <a href="#" class="view-all" onclick="switchPage('troops')">View All Troops <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="troops-grid">
+                <div class="troop-card card-peka">
+                    <div class="card-content">
+                        <h4>P.E.K.K.A</h4>
+                        <p>Heavily armored and hits hard. A true frontline tank.</p>
+                        <span class="troop-type">TANK</span>
+                    </div>
+                </div>
+                <div class="troop-card card-witch">
+                    <div class="card-content">
+                        <h4>WITCH</h4>
+                        <p>Summons skeletons to do her bidding.</p>
+                        <span class="troop-type">SUMMON</span>
+                    </div>
+                </div>
+                <div class="troop-card card-dragon">
+                    <div class="card-content">
+                        <h4>DRAGON</h4>
+                        <p>Flying beast that deals splash damage.</p>
+                        <span class="troop-type">AIR</span>
+                    </div>
+                </div>
+                <div class="troop-card card-wizard">
+                    <div class="card-content">
+                        <h4>WIZARD</h4>
+                        <p>Deals area damage with powerful fire magic.</p>
+                        <span class="troop-type">RANGED</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="about-summary">
+            <div class="about-summary-banner">
+                <div class="about-summary-text">
+                    <h2>ABOUT CLASH OF BANG</h2>
+                    <p>Clash of BaNG is a dark fantasy world where strategy and power collide. Command your troops, master unique abilities, and rise through intense battles. Join a community of warriors, share your tactics, and prove your strength on the battlefield.</p>
+                    <button class="btn-primary" onclick="switchPage('about')">LEARN MORE ABOUT US</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main id="page-gallery" class="page">
+        <section class="page-banner">
+            <h5>EXPLORE THE WORLD</h5>
+            <h1>GALLERY</h1>
+            <p>Discover epic visuals, powerful characters, and </p>
+            <p> dark fantasy world behind every battle.</p>
+        </section>
+        
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="troops">TROOPS</button>
+            <button class="filter-btn" data-filter="heroes">HEROES</button>
+            <button class="filter-btn" data-filter="artwork">ARTWORK</button>
+        </div>
+
+    <section class="gallery-grid">
+    <div class="gallery-item item-dark-knight" data-category="troops" onclick="bukaDetailGallery('DARK KNIGHT', 'gallery')">
+        <span class="item-tag">TROOPS</span>
+        <h3>DARK KNIGHT</h3>
+        <p>A heavily armored warrior who delivers powerful melee attacks with unmatched strength.</p>
+    </div>
+    
+    <div class="gallery-item item-shadow-archer" data-category="troops" onclick="bukaDetailGallery('SHADOW ARCHER', 'gallery')">
+        <span class="item-tag">TROOPS</span>
+        <h3>SHADOW ARCHER</h3>
+        <p>A stealthy archer who attacks from a distance with speed and accuracy.</p>
+    </div>
+    
+    <div class="gallery-item item-lava-golem" data-category="troops" onclick="bukaDetailGallery('LAVA GOLEM', 'gallery')">
+        <span class="item-tag">TROOPS</span>
+        <h3>LAVA GOLEM</h3>
+    </div>
+    
+    <div class="gallery-item item-chaos-mage" data-category="heroes" onclick="bukaDetailGallery('CHAOS MAGE', 'gallery')">
+        <span class="item-tag">HEROES</span>
+        <h3>CHAOS MAGE</h3>
+    </div>
+    
+    <div class="gallery-item item-ancient-altar" data-category="artwork" onclick="bukaDetailGallery('ANCIENT ALTAR', 'gallery')">
+        <span class="item-tag">ARTWORK</span>
+        <h3>ANCIENT ALTAR</h3>
+    </div>
+    
+    <div class="gallery-item item-dark-world" data-category="artwork" onclick="bukaDetailGallery('DARK WORLD', 'gallery')">
+        <span class="item-tag">ARTWORK</span>
+        <h3>DARK WORLD</h3>
+    </div>
+</section>
+
+    </main>
+
+    <main id="page-troops" class="page">
+        <section class="troops-banner">
+            <h5>OUR</h5>
+            <h1>TROOPS</h1>
+            <p>Explore the might of our army. Hover over each troop to see their detailed stats and abilities.</p>
+        </section>
+
+        <div class="filter-container">
+            <button class="filter-btn active" data-filter="all">ALL</button>
+            <button class="filter-btn" data-filter="mle">MELEE</button>
+            <button class="filter-btn" data-filter="rng">RANGED</button>
+            <button class="filter-btn" data-filter="mgc">MAGIC</button>
+            <button class="filter-btn" data-filter="fly">FLYING</button>
+            <div class="sort-dropdown">
+                <select>
+                    <option>SORT BY: DEFAULT</option>
+                </select>
+            </div>
+        </div>
+
+<div class="gallery-grid">
+    <div class="gallery-item item-dark-knight" data-category="mle" onclick="bukaDetailGallery('DARK KNIGHT', 'troops')">
+        <span class="item-tag">MELEE</span>
+        <h3>DARK KNIGHT</h3>
+    </div>
+
+    <div class="gallery-item item-shadow-archer" data-category="rng" onclick="bukaDetailGallery('SHADOW ARCHER', 'troops')">
+        <span class="item-tag">RANGED</span>
+        <h3>SHADOW ARCHER</h3>
+    </div>
+
+    <div class="gallery-item item-lava-golem" data-category="mle" onclick="bukaDetailGallery('LAVA GOLEM', 'troops')">
+        <span class="item-tag">TANK</span>
+        <h3>LAVA GOLEM</h3>
+    </div>
+
+    <div class="gallery-item item-chaos-mage" data-category="mgc" onclick="bukaDetailGallery('WITCH', 'troops')">
+        <span class="item-tag">MAGIC</span>
+        <h3>WITCH</h3>
+    </div>
+
+    <div class="gallery-item item-dark-world" data-category="fly" onclick="bukaDetailGallery('INFERNO DRAGON', 'troops')">
+        <span class="item-tag">FLYING</span>
+        <h3>INFERNO DRAGON</h3>
+    </div>
+
+    <div class="gallery-item item-ancient-altar" data-category="mgc" onclick="bukaDetailGallery('DARK WIZARD', 'troops')">
+        <span class="item-tag">MAGIC</span>
+        <h3>DARK WIZARD</h3>
+    </div>
+</div>
+    </main>
+
+    <main id="page-detail-gallery" class="page">
+    <section class="about-full-section">
+        <button id="btn-back-gallery" class="btn-readmore" style="margin-bottom: 20px; width: fit-content;">← BACK</button>
+        
+        <div class="profile-container" style="display: flex; gap: 40px; flex-wrap: wrap; margin-top: 10px;">
+            
+            <div class="profile-left" style="flex: 1; min-width: 300px; background: rgba(18, 19, 26, 0.8); padding: 30px; border-radius: 12px; border: 1px solid rgba(168, 85, 247, 0.2);">
+                <span id="gallery-detail-tag" class="item-tag">TAG</span>
+                <h1 id="gallery-detail-title" style="margin: 10px 0 25px 0; font-size: 36px; color: #fff; text-transform: uppercase; letter-spacing: 1px;">NAMA HERO</h1>
+                
+                <h3 style="color: #9333ea; margin-bottom: 15px; font-size: 18px;">HERO STATISTICS</h3>
+                
+                <div class="stat-group" style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px; color: #b3b4b6; font-size: 14px;">
+                        <span>ATTACK POWER</span><span id="stat-atk-val">0%</span>
+                    </div>
+                    <div style="background: #1e1b29; height: 10px; border-radius: 5px; overflow: hidden;">
+                        <div id="stat-atk-bar" style="background: #ef4444; height: 100%; width: 0%; transition: width 0.8s ease-in-out;"></div>
+                    </div>
+                </div>
+
+                <div class="stat-group" style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px; color: #b3b4b6; font-size: 14px;">
+                        <span>DEFENSE / HEALTH</span><span id="stat-def-val">0%</span>
+                    </div>
+                    <div style="background: #1e1b29; height: 10px; border-radius: 5px; overflow: hidden;">
+                        <div id="stat-def-bar" style="background: #22c55e; height: 100%; width: 0%; transition: width 0.8s ease-in-out;"></div>
+                    </div>
+                </div>
+
+                <div class="stat-group" style="margin-bottom: 15px;">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px; color: #b3b4b6; font-size: 14px;">
+                        <span>SPEED / AGILITY</span><span id="stat-spd-val">0%</span>
+                    </div>
+                    <div style="background: #1e1b29; height: 10px; border-radius: 5px; overflow: hidden;">
+                        <div id="stat-spd-bar" style="background: #3b82f6; height: 100%; width: 0%; transition: width 0.8s ease-in-out;"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="profile-right" style="flex: 2; min-width: 300px; background: rgba(18, 19, 26, 0.5); padding: 30px; border-radius: 12px; border: 1px solid rgba(255, 255, 255, 0.05);">
+                <h3 style="color: #9333ea; margin-bottom: 10px; font-size: 18px;">HERO LORE</h3>
+                <div id="gallery-detail-content" style="color: #b3b4b6; line-height: 1.6; font-size: 15px; margin-bottom: 30px;">
+                    </div>
+                
+                <h3 style="color: #9333ea; margin-bottom: 15px; font-size: 18px;">SPECIAL ABILITIES</h3>
+                <div id="gallery-detail-skills" style="display: flex; flex-direction: column; gap: 15px;">
+                    </div>
+            </div>
+
+        </div>
+    </section>
+</main>
+
+ <main id="page-readMore" class="page">
+        <section class="read-more-section">
+            <div class="read-more-art"></div>
+            <h1>EVENT OF CLASH OF BANG</h1>
+            <div class="read-more-box ">
+                <p>This slide is a daily event that may change or disappear at any time. 
+                    Expect these events to occur within a certain timeframe. Keep playing 
+                    Clash of Clans to make the most of your free time..</p>
+                <br>
+                <p>Our mission is to create a space where both new and experienced players 
+                    can discover guides, enjoy stunning artwork, and connect with others who share the same interest.
+                     With a focus on dark troops and immersive gameplay, Clash of BaNG continues to grow as a hub for strategy, exploration, and community.</p>
+            </div>
+        </section>
+    </main>
+
+    <main id="page-about" class="page">
+        <section class="about-full-section">
+            <div class="about-header-art"></div>
+            <h1>ABOUT CLASH OF BANG</h1>
+            <div class="about-box">
+                <p>Clash of BaNG is a growing fantasy community inspired by a clash-style universe where strategy and creativity come together. What started as a small forum has evolved into a platform where players can explore powerful troops, learn battle strategies, and share their passion for the game.</p>
+                <br>
+                <p>Our mission is to create a space where both new and experienced players can discover guides, enjoy stunning artwork, and connect with others who share the same interest. With a focus on dark troops and immersive gameplay, Clash of BaNG continues to grow as a hub for strategy, exploration, and community.</p>
+            </div>
+        </section>
+    </main>
+
+    <main id="page-register" class="page">
+        <section class="form-section">
+            <h5>JOIN THE BATTLE</h5>
+            <h1>CREATE YOUR LEGEND</h1>
+            
+            <div class="form-box">
+                <h2>REGISTER NOW</h2>
+                <p class="form-subtitle">Fill in the form below to create your account.</p>
+                
+                <form onsubmit="event.preventDefault();  handleRegister();">
+                    <div class="input-group">
+                        <label>Username</label>
+                        <input type="text" id="reg-username" placeholder="Enter your username" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Email address</label>
+                        <input type="email" id="reg-email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Password</label>
+                        <input type="password" id="reg-password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-group">
+                        <label>Country</label>
+                        <input type="text" placeholder="Enter your country" required>
+                    </div>
+                    
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" required>
+                        <label for="terms">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">CREATE ACCOUNT</button>
+                </form>
+                <p class="switch-form-text">Already have an account? <a href="#" onclick="switchPage('login')">Login here</a></p>
+            </div>
+        </section>
+    </main>
+
+   <main id="page-login" class="page">
+    <section class="form-section">
+        <h5>JOIN THE BATTLE</h5>
+        <h1>CREATE YOUR LEGEND</h1>
+        
+        <div class="form-box">
+            <h2>LOGIN NOW</h2>
+            <p class="form-subtitle">Fill in the form below to login your account.</p>
+            
+            <form onsubmit="event.preventDefault(); handleLogin();">
+                <div class="input-group">
+                    <label>Username</label>
+                    <input type="text" id="login-username" placeholder="Enter your username" required>
+                </div>
+                <div class="input-group">
+                    <label>Email address</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-group">
+                    <label>Password</label>
+                    <input type="password" id="login-password" placeholder="Enter your password" required>
+                </div>
+                
+                <button type="submit" class="btn-submit">LOGIN</button>
+            </form>
+            <p class="switch-form-text">Don't have an account? <a href="#" onclick="switchPage('register')">Create here</a></p>
+        </div>
+    </section>
+</main>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-info">
+                <div class="logo">
+                    <div class="logo-icon">⚔️</div>
+                    <div class="logo-text">CLASH<br><span>OF BANG</span></div>
+                </div>
+                <p>Unite. Strategize. Dominate.<br>Be part of the Clash of BaNG community today!</p>
+            </div>
+            <div class="footer-links">
+                <h4>QUICK LINKS</h4>
+                <a href="#" onclick="switchPage('home')">Home</a>
+                <a href="#" onclick="switchPage('gallery')">Gallery</a>
+                <a href="#" onclick="switchPage('troops')">Troops</a>
+                <a href="#" onclick="switchPage('about')">About</a>
+                <a href="#" onclick="switchPage('register')">Register</a>
+            </div>
+            <div class="footer-links">
+                <h4>COMMUNITY</h4>
+                <a href="#">Discord</a>
+                <a href="#">Facebook</a>
+                <a href="#">Instagram</a>
+            </div>
+            <div class="footer-links">
+                <h4>SUPPORT</h4>
+                <a href="#">Guidelines</a>
+                <a href="#">FAQ</a>
+                <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-newsletter">
+                <h4>JOIN OUR NEWSLETTER</h4>
+                <p>Get the latest updates and news straight to your inbox!</p>
+                <div class="newsletter-input">
+                    <input type="email" placeholder="Enter your email">
+                    <button onclick="alert('Terima kasih telah berlangganan!')">JOIN</button>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Clash of BaNG. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
